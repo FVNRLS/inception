@@ -35,8 +35,3 @@ Project Inception is a 42 project that challenges students to create a website f
   
   ## Usage
   To use Inception, navigate to the website URL in your web browser. The website will display a homepage with information about the dream-sharing technology and a link to the login page.
-
-You can create a new account or log in with an existing account to access the dashboard. From the dashboard, you can create new dreams, view your past dreams, and update your account settings.
-
-
-
