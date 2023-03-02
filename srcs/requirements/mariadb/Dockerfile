@@ -1,4 +1,4 @@
-FROM 		alpine:3.16
+FROM 		alpine:3.16.3
 
 ARG			DB_NAME \
     		DB_USER \
@@ -7,14 +7,12 @@ ARG			DB_NAME \
 
 RUN 		apk update && apk add --no-cache mariadb mariadb-client
 
-# The command creates a directory named "/var/run/mysqld" using the "mkdir" command.
-# The "chmod" command is used to change the permissions of the newly created directory to "777".
-# A configuration file named "docker.cnf" is created in the "/etc/my.cnf.d" directory with the "[mysqld]" section and some options.
+# creates a directory named "/var/run/mysqld"
+# configures and creates "docker.cnf" in the "/etc/my.cnf.d"
 # The "skip-host-cache" option is set in the "docker.cnf" configuration file to skip host cache.
 # The "skip-name-resolve" option is set in the "docker.cnf" configuration file to skip name resolving.
 # The "bind-address" option is set in the "docker.cnf" configuration file to bind to all available network interfaces.
-# The "tee" command is used to write the output of the echo command to the "docker.cnf" file and the console.
-# The "sed" command is used to edit the "mariadb-server.cnf" configuration file by replacing the "skip-networking" option with "skip-networking=0".
+# edits the "mariadb-server.cnf" configuration file by replacing the "skip-networking" option with "skip-networking=0".
 RUN 		mkdir /var/run/mysqld; \
     		chmod 777 /var/run/mysqld; \
     		{ echo '[mysqld]'; \
@@ -27,10 +25,10 @@ RUN 		mkdir /var/run/mysqld; \
 
 RUN 		mysql_install_db --user=mysql --datadir=/var/lib/mysql
 
-EXPOSE 		3306
-
 # copies the database script to container
 COPY 		./conf/create_db.sh .
+
+RUN 		chmod +x create_db.sh
 
 # runs the script to create a new database and deletes the script from container
 RUN 		sh create_db.sh && rm create_db.sh
