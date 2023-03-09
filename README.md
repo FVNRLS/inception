@@ -14,7 +14,7 @@ Project Inception is a 42 project that challenges students to create a website f
   
   * navigate to the project's root directory, build the project and run the containers with <br>
   `  make `  <br>  
-  * open the the webbrowser and search for URL: <br>
+  * open the the web-browser and search for URL: <br>
   `  https://localhost:443`  <br> 
   
   
