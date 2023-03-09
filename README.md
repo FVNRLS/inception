@@ -12,8 +12,10 @@ Project Inception is a 42 project that challenges students to create a website f
   * Clone the repository to your web server's document root: <br>
 `  git clone https://github.com/username/project-inception.git /var/www/html/inception` <br>
   
-  * build the project and run the containers with <br>
-  `  make <br>  `
+  * navigate to the project's root directory, build the project and run the containers with <br>
+  `  make `  <br>  
+  * open the the webbrowser and search for URL: <br>
+  `  https://localhost:443`  <br> 
   
   
   ## Usage
