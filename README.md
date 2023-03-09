@@ -13,10 +13,8 @@ Project Inception is a 42 project that challenges students to create a website f
 `  git clone https://github.com/username/project-inception.git /var/www/html/inception` <br>
   
   * navigate to the project's root directory, build the project and run the containers with <br>
-  `  make `  <br>  
-  * open the the web-browser and search for URL: <br>
-  `  https://localhost:443`  <br> 
+  `  make `  <br> 
   
   
   ## Usage
-  To use Inception, navigate to the website URL in your web browser. The website will display a homepage with information about the dream-sharing technology and a link to the login page.
+  To use Inception, navigate to the website URL: https://localhost:443 in your web browser. The website will display a homepage with information about the dream-sharing technology and a link to the login page.
