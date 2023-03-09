@@ -1,5 +1,5 @@
 # Inception
-Project Inception is a 42 project that challenges students to create a website for a fictional company that provides dream-sharing technology. This README will provide an overview of the project and how to set it up.
+Project Inception is a 42 project that challenges students to create a website based on docker services: nginx, mariadb and wordpress.
 
 ## To run Inception, you will need:
 - docker
